@@ -1,0 +1,38 @@
+-- return {
+--   {
+--     "3rd/image.nvim",
+--     opts = {
+--       backend = "kitty",
+--       max_width = 100,
+--       max_height = 12,
+--       max_height_window_percentage = math.huge,
+--       max_width_window_percentage = math.huge,
+--       window_overlap_clear_enabled = true,
+--       window_overlap_clear_fit_ignore = { "cmp_menu", "cmp_docs", "" },
+--     },
+--   },
+--   {
+--     "GCBallesteros/jupytext.nvim",
+--     -- config = true,
+--     -- Depending on your nvim distro or config you may need to make the loading not lazy
+--     lazy = false,
+--     config = function()
+--       require("jupytext").setup({
+--         style = "markdown",
+--         output_extension = "md",
+--         force_ft = "markdown",
+--       })
+--     end,
+--   },
+--   {
+--     "benlubas/molten-nvim",
+--     version = "^1.0.0", -- use version tags for stability
+--     dependencies = { "3rd/image.nvim" },
+--     build = ":UpdateRemotePlugins", -- critical for remote plugins
+--     init = function()
+--       -- these are example mappings, feel free to change them
+--       vim.g.molten_image_provider = "image.nvim"
+--       vim.g.molten_output_win_max_height = 20
+--     end,
+--   },
+-- }
