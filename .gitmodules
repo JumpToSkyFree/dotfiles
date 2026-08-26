@@ -1,0 +1,3 @@
+[submodule "plugins/nvim-ghostty-theme-sync"]
+	path = plugins/nvim-ghostty-theme-sync
+	url = https://github.com/JumpToSkyFree/nvim-ghostty-theme-sync.git

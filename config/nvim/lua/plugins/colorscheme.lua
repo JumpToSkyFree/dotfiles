@@ -352,10 +352,61 @@ return {
     --     vim.cmd.colorscheme('zenbones')
     -- end
   },
+  { "dasupradyumna/midnight.nvim", lazy = false, priority = 1000 },
   {
-    "LazyVim/LazyVim",
+    "wtfox/luna.nvim",
+    lazy = false,
+    priority = 1000,
     opts = {
-      colorscheme = "flexoki",
+      transparent = false,
+      accent = 1.0,
+      plugins = {
+        all = true,
+        auto = true,
+      },
+      on_colors = function(colors) end,
+      on_highlights = function(highlights, colors) end,
     },
   },
+  {
+    "landerson02/ghostty-theme-sync.nvim",
+    --- @type GhosttySyncConfig
+    opts = {
+      mode_aware = true,
+    },
+  },
+  {
+    dir = "~/Projects/nvim-ghostty-theme-sync",
+    name = "nvim-ghostty-theme-sync",
+    opts = {},
+  },
+  {
+    "f-person/auto-dark-mode.nvim",
+    opts = {
+      set_dark_mode = function()
+        vim.api.nvim_set_option_value("background", "dark", {})
+        vim.cmd.colorscheme("zenbones")
+      end,
+      set_light_mode = function()
+        vim.api.nvim_set_option_value("background", "light", {})
+        vim.cmd.colorscheme("zenbones")
+      end,
+      update_interval = 3000,
+      fallback = "dark",
+    },
+  },
+  {
+    "pjhamera/national-parks-themes",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("parks").setup()
+    end,
+  },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "dayfox",
+  --   },
+  -- },
 }
